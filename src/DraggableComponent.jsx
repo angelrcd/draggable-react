@@ -188,6 +188,8 @@ class DraggableComponent extends Component {
 
     return (
       <div
+        // draggable
+
         style={{
           position: 'relative',
           top: position.y,
@@ -202,7 +204,7 @@ class DraggableComponent extends Component {
         }}
         onMouseDown={this.handleMouseDown}
         onTouchStart={this.handleTouchStart}
-        
+        // onDragOver={e => e.preventDefault()}
         onTransitionEnd={this.handleFinishResettingToOriginalPosition}
       >
         {children(isDragging, position)}
